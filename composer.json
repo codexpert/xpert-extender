@@ -1,0 +1,17 @@
+{
+    "name": "na/xpert-extender",
+    "authors": [
+        {
+            "name": "Nadim Tuhin",
+            "email": "nadimtuhin@gmail.com"
+        }
+    ],
+    "require": {
+    	"anahkiasen/former": "4.0.*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThemeXpert\\XpertXtender\\": "src"
+        }
+    }
+}
