@@ -12,12 +12,8 @@ trait XpertAddonContainer{
 		return $this->addons;
 	}
 
-	public function getCurrentAddon(){
-		//TODO return currently selected addon
-	}
-
 	public function getAddon($slug){
 		//TODO return addon by slug
-		return $addons[$slug];
+		return $this->addons[$slug];
 	}
 }

@@ -43,5 +43,6 @@ $testimonialAddon = new TestimonialAddon();
 
 $box = new XtenderBox("page-section-slug", "Xtender Page Secction", ["page_section"]);
 
+
 $box->add("gallery-addon", $galleryAddon);
 $box->add("testimonial-addon", $testimonialAddon);

@@ -1,4 +1,4 @@
-<?php echo Former::select("addon")->options($addons); ?>
+<?php echo Former::select($slug)->label('Addons')->options($addons); ?>
 
 <hr>
 

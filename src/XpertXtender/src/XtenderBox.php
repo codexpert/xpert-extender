@@ -5,19 +5,21 @@ class XtenderBox extends Metabox{
 	use XpertAddonContainer;
 
 	public function render($post){
-		$data = [];
-		$data['addons'] = $this->getAddons();
-		$data['post'] = $post;
-
-		// array_map(function($addon){
-		// 	// return [];
-		// }, array_keys($data['addons']));
+		$data = array(
+			'post'=> $post,
+			'addons'=> $this->getAddons(),
+			'slug'=> $this->slug,
+		);
 
 		return view(__DIR__ . "/views/boxer-settings.php", $data);
 	}
 
 	public function save($post_id){
-		$addon = $this->getCurrentAddon();
+		// $current_addon_slug = get_post_meta( $post_id, $this->slug, true );
+		
+		$current_addon_slug = $_POST[$this->slug];
+
+		$addon = $this->getAddon($current_addon_slug);
 
 		foreach($addon->getFillable() as $field) {
 			// Make sure that it is set.

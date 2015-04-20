@@ -1,7 +1,7 @@
 <?php 
 
 class TestimonialAddon extends XtenderAddon{
-	protected $fillable = ["title", "testimonial"];
+	protected $fillable = ["testimonial_title", "testimonial_content"];
 	protected $name = "TestimonialAddon";
 	
 	public function settings($post, $data){
