@@ -1,8 +1,10 @@
 <?php
 
+use Former\Facades\Former;
 
 // view("test.php", ['first_name'=>'Tuhin']);
 function view($file, $data){
+	
 	extract($data);
 
 	ob_start();
@@ -12,6 +14,7 @@ function view($file, $data){
 
 	return $output;
 }
+
 
 
 if(!function_exists('dd')){

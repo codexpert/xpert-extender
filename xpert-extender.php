@@ -30,8 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-require("__DIR__"."/vendor/autoload.php");
-require(__DIR__ . "/src/ThemeXpert/XpertExtender/functions.php");
+require(__DIR__ ."/vendor/autoload.php");
 require(__DIR__ . "/register.php");
 require(__DIR__ . "/metabox.php");
 

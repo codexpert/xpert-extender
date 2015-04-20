@@ -1,5 +1,5 @@
 {
-    "name": "na/xpert-extender",
+    "name": "themexpert/xpert-xtender",
     "authors": [
         {
             "name": "Nadim Tuhin",
@@ -10,6 +10,12 @@
     	"anahkiasen/former": "4.0.*@dev"
     },
     "autoload": {
+        "classmap":[
+            "src/XpertXtender/Facades"
+        ],
+        "files":[
+            "src/XpertXtender/functions.php"
+        ],
         "psr-4": {
             "ThemeXpert\\XpertXtender\\": "src"
         }

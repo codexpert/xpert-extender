@@ -26,14 +26,18 @@ add_action( 'add_meta_boxes', 'xpert_xtender_add_meta_box' );
  * @param WP_Post $post The object for the current post/page.
  */
 function xpert_xtender_meta_box_callback( $post ) {
+	wp_nonce_field( 'xpert_xtender_meta_box', 'xpert_xtender_meta_box_nonce' );
+	
+	//on the controller
 	/*
 	 * Use get_post_meta() to retrieve an existing value
 	 * from the database and use the value for the form.
 	 */
 	$project_title = get_post_meta( $post->ID, 'project_title', true );
 	$client_name = get_post_meta( $post->ID, 'client_name', true );
+	$photo = get_post_meta( $post->ID, 'photo', true );
 
-	echo view(__DIR__ . "/settings.php", compact('project_title', 'client_name'));
+	echo view(__DIR__ . "/settings.php", compact('project_title', 'client_name', 'photo'));
 }
 
 /**
@@ -80,13 +84,13 @@ function xpert_xtender_save_meta_box_data( $post_id ) {
 	
 
 	/* OK, it's safe for us to save the data now. */
-	$fillable = ['project_title', 'client_name'];
+	$fillable = ['project_title', 'client_name', 'photo'];
 
 	foreach($fillable as $field)
 	{
 		// Make sure that it is set.
 		if ( ! isset( $_POST[$field] ) ) {
-			return;
+			continue;
 		}
 
 		// Sanitize user input.
@@ -97,4 +101,5 @@ function xpert_xtender_save_meta_box_data( $post_id ) {
 	}
 
 }
+
 add_action( 'save_post', 'xpert_xtender_save_meta_box_data' );
