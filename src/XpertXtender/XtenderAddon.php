@@ -17,4 +17,8 @@ abstract class XtenderAddon{
 	public function getFillable(){
 		return $this->fillable;
 	}
+
+	protected function template($file, $data){
+		return view($file, $data);
+	}
 }
