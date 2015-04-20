@@ -1,8 +1,8 @@
 <?php 
 
-class GalleryAddon extends XtenderAddon{
-	protected $fillable = ["title", "content"];
-	protected $name = "GalleryAddon";
+class TestimonialAddon extends XtenderAddon{
+	protected $fillable = ["title", "testimonial"];
+	protected $name = "TestimonialAddon";
 	
 	public function settings($post, $data){
 		return $this->template(__DIR__."/views/settings.php", $data);

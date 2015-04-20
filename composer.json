@@ -11,14 +11,16 @@
     },
     "autoload": {
         "classmap":[
-            "src/XpertXtender/Facades",
-            "src/XpertXtender"
+            "src/XpertXtender/src/Facades",
+            "src/XpertXtender/src",
+
+            "src/WpUtility/src"
         ],
         "files":[
-            "src/XpertXtender/functions.php"
+            "src/WpUtility/src/functions.php"
         ],
         "psr-4": {
-            "ThemeXpert\\XpertXtender\\": "src"
+            "ThemeXpert\\": "src/"
         }
     }
 }

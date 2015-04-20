@@ -26,26 +26,22 @@
  */
 
 // If this file is called directly, abort.
+// Former::framework("TwitterBootstrap3");
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
 require(__DIR__ . "/vendor/autoload.php");
 require(__DIR__ . "/register.php");
-require(__DIR__ . "/metabox.php");
-require(__DIR__ . "/Addons/Gallery/GalleryAddon.php");
 
-Former::framework("TwitterBootstrap3");
+require(__DIR__ . "/Addons/Gallery/GalleryAddon.php");
+require(__DIR__ . "/Addons/Testimonial/TestimonialAddon.php");
 
 $galleryAddon = new GalleryAddon();
-
-// $addonContainer = new AddonContainer();
-
-// function register_xtender_addon($addon_slug, $class_name){
-// 	global $addonContainer;
-
-// 	$addonContainer->add($addon_slug, $class_name);
-// }
+$testimonialAddon = new TestimonialAddon();
 
 
+$box = new XtenderBox("page-section-slug", "Xtender Page Secction", ["page_section"]);
 
+$box->add("gallery-addon", $galleryAddon);
+$box->add("testimonial-addon", $testimonialAddon);
