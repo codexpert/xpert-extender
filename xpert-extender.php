@@ -30,7 +30,22 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-require(__DIR__ ."/vendor/autoload.php");
+require(__DIR__ . "/vendor/autoload.php");
 require(__DIR__ . "/register.php");
 require(__DIR__ . "/metabox.php");
+require(__DIR__ . "/Addons/Gallery/GalleryAddon.php");
+
+Former::framework("TwitterBootstrap3");
+
+$galleryAddon = new GalleryAddon();
+
+// $addonContainer = new AddonContainer();
+
+// function register_xtender_addon($addon_slug, $class_name){
+// 	global $addonContainer;
+
+// 	$addonContainer->add($addon_slug, $class_name);
+// }
+
+
 
