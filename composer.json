@@ -1,26 +1,23 @@
 {
-    "name": "themexpert/xpert-xtender",
+    "name": "themexpert/onepager",
+    "description": "Onepager plugin for WordPress",
+    "homepage": "http://www.themexpert.com",
+    "license": "GPL",
     "authors": [
         {
-            "name": "Nadim Tuhin",
-            "email": "nadimtuhin@gmail.com"
+            "name": "ThemeXpert",
+            "email": "info@themexpert.com"
         }
     ],
-    "require": {
-    	"anahkiasen/former": "4.0.*@dev"
-    },
-    "autoload": {
-        "classmap":[
-            "src/XpertXtender/src/Facades",
-            "src/XpertXtender/src",
-
-            "src/WpUtility/src"
-        ],
-        "files":[
-            "src/WpUtility/src/functions.php"
-        ],
-        "psr-4": {
-            "ThemeXpert\\": "src/"
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/themexpert/boxr.git"
         }
-    }
+    ],
+   "require": {
+        "themexpert/boxr": "dev-master"
+    },
+   "minimum-stability": "dev"
 }
+

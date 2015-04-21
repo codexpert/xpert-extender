@@ -1,0 +1,25 @@
+{
+    "name": "themexpert/boxr",
+    "description": "Kickboxing library for WordPress Metabox",
+    "authors": [
+        {
+            "name": "Parvez Akther",
+            "email": "parvez@themexpert.com"
+        }
+    ],
+    "require": {
+        "anahkiasen/former": "4.0.*@dev"
+    },
+    "autoload": {
+        "classmap":[
+            "src/Facades",
+            "src",
+        ],
+        "files":[
+            "src/Helpers/View.php"
+        ],
+        "psr-4": {
+            "ThemeXpert\\Boxr\\": "src"
+        }
+    }
+}
