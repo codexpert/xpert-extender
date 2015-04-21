@@ -46,3 +46,8 @@ $box = new XtenderBox("page-section-slug", "Xtender Page Secction", ["page_secti
 
 $box->add("gallery-addon", $galleryAddon);
 $box->add("testimonial-addon", $testimonialAddon);
+
+
+$box2 = new XtenderBox("avada-box", "Avada Page Secction", ["page_section"]);
+$box2->add("gallery-addon", $galleryAddon);
+$box2->add("testimonial-addon", $testimonialAddon);
